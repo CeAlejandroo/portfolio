@@ -202,6 +202,7 @@ export default function Portfolio() {
           border: 2px solid #a8a8c8;
           color: #fff;
           text-decoration: none;
+          text-align: center;
           font-size: 14px;
           font-weight: 500;
           border-radius: 25px;
@@ -809,7 +810,7 @@ export default function Portfolio() {
             Si quieres ponerte en contacto conmigo escríbeme a{" "}
             <a href="mailto:cebale4@gmail.com">cebale4@gmail.com</a>
           </p>
-          <button className="cv-button">Descarga mi CV</button>
+          <a href="/cv.pdf" download className="cv-button">Descarga mi CV</a>
           <div className="social-icons">
             <a target="_blank" href="https://www.linkedin.com/in/antonio-alejandro-ceballos-rivera-6a5166375/" className="social-icon" aria-label="LinkedIn">
               <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -835,17 +836,13 @@ export default function Portfolio() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                ¡Hola! Soy Antonio Alejandro, Ingeniero en Sistemas apasionado por el desarrollo web
-                y la creación de experiencias digitales únicas.
+                ¡Hola! Soy <strong>Antonio Alejandro</strong>, Ingeniero en Sistemas Computacionales y un apasionado del desarrollo web enfocado en la creación de experiencias digitales robustas, escalables y únicas.
               </p>
               <p>
-                Me especializo en el desarrollo frontend utilizando tecnologías  como HTML, CSS,
-                JavaScript y React. Me encanta transformar ideas en interfaces atractivas y funcionales
-                que brinden una excelente experiencia de usuario.
+                Tengo experiencia sólida diseñando e implementando soluciones tanto en el <strong>Frontend</strong> como en el <strong>Backend</strong>. Mi stack principal incluye tecnologías como <strong>JavaScript, TypeScript, React, Next.js y Python</strong>. Me encanta transformar ideas complejas en interfaces atractivas, funcionales y optimizadas que brinden una excelente experiencia de usuario.
               </p>
               <p>
-                Me gusta mucho pensar en dejar algo especial aprendiendo cosas nuevas cada día para plasmarlo en mis proyectos.
-                Actualmente me encuentro en proceso para ser un Desarrollador Full Stack
+                Me impulsa el aprendizaje continuo y moverme al ritmo del mercado tecnológico actual para plasmar las mejores prácticas en cada proyecto. Actualmente me desempeño como <strong>Desarrollador Full Stack Freelance</strong>, siempre listo para enfrentar nuevos retos y colaborar en proyectos reales que generen un impacto positivo.
               </p>
             </div>
             <div className="about-image">
@@ -872,10 +869,10 @@ export default function Portfolio() {
                       Aplicación de comida para estudiantes.
                     </p>
                     <div className="portfolio-card-tags">
-                      <span className="tag">Next</span>
-                      <span className="tag">CSS</span>
-                      <span className="tag">JavaScript</span>
-                      <span className="tag">Html</span>
+                      <span className="tag">Dart</span>
+                      <span className="tag">Flutter</span>
+                      <span className="tag">Firebase</span>
+                      <span className="tag">Provider</span>
                     </div>
                   </div>
                 </div>
@@ -884,21 +881,15 @@ export default function Portfolio() {
                 <DialogHeader>
                   <DialogTitle className="modal-title">Almuercito escolar</DialogTitle>
                   <DialogDescription className="modal-subtitle">
-                    Aplicación móvil para la gestión de alimentos escolares.
+                    Aplicación móvil para ventas de alimentos dentro de campus universitario.
                   </DialogDescription>
                 </DialogHeader>
 
                 <div className="modal-body">
                   <p>
-                    Desarrollé esta solución integral para optimizar pedidos en cafeterías estudiantiles,
-                    incluyendo carrito de compras y gestión de inventario.
+                    Desarrollé esta solución integral para optimizar la compr de alimentos entre estudiantes y cafetería dentro del
+                    campus universitario, incluyendo funcionalidades como carrito de compras, gestión de inventario y notificaciones en tiempo real para mejorar la experiencia del usuario y la eficiencia operativa.
                   </p>
-
-                  <div className="modal-tech">
-                    <strong>Tecnologías: </strong>
-                    <span>React, CSS, JavaScript, Next.js</span>
-                  </div>
-
                   <a href="TU_LINK_AQUI" target="_blank" rel="noreferrer" className="btn-github">
                     Ver proyecto en GitHub
                   </a>
@@ -908,63 +899,73 @@ export default function Portfolio() {
 
             <Dialog>
               <DialogTrigger asChild>
-                <div className="portfolio-card" onClick={() => setOpenModal("dashboard")}>
-                  <div className="portfolio-card-image">📊</div>
+                <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
+                  <div className="portfolio-card-image"> <img src="/Almuercito.png" alt="Almuercito escolar" className="card-icon" /></div>
                   <div className="portfolio-card-content">
-                    <h3 className="portfolio-card-title">Dashboard Analytics</h3>
+                    <h3 className="portfolio-card-title">Sistema experto nutricional</h3>
                     <p className="portfolio-card-desc">
-                      Panel de control con gráficas interactivas y visualización de datos en tiempo real.
+                      Sistema experto nutricional para recomendar dietas personalizadas a miembros de Gym.
                     </p>
                     <div className="portfolio-card-tags">
-                      <span className="tag">HTML</span>
+                      <span className="tag">PHP</span>
+                      <span className="tag">Python</span>
                       <span className="tag">JavaScript</span>
-                      <span className="tag">Bootstrap</span>
+                      <span className="tag">Html y Css</span>
                     </div>
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="dialog-custom">
                 <DialogHeader>
-                  <DialogTitle>Dashboard Analytics</DialogTitle>
-                  <DialogDescription>
-                    Panel de control para visualización de datos.
+                  <DialogTitle className="modal-title">Sistema experto nutricional</DialogTitle>
+                  <DialogDescription className="modal-subtitle">
+                    Sistema experto nutricional para recomendar dietas personalizadas a miembros de Gym.
                   </DialogDescription>
                 </DialogHeader>
-                <div>
-                  <p>Dashboard interactivo con gráficas en tiempo real, métricas clave y reportes personalizables.</p>
-                  <p>Tecnologías: HTML, JavaScript, Bootstrap, Chart.js</p>
-                  <a href="#" className="text-blue-500">Ver proyecto</a>
+                <div className="modal-body">
+                  <p>
+                    Desarrollé un sistema experto nutricional utilizando PHP para el backend y Python para la lógica de inferencia, con una interfaz frontend en HTML, CSS y JavaScript. El sistema recopila datos de los usuarios, como edad, peso, altura, nivel de actividad física y objetivos de salud, para generar recomendaciones dietéticas personalizadas. Implementé un motor de reglas que evalúa las necesidades nutricionales individuales y sugiere planes de alimentación equilibrados, ayudando a los usuarios a alcanzar sus metas de fitness de manera efectiva.
+                  </p>
+                  <a href="https://github.com/CeAlejandroo/sistema_nutricional/tree/main" target="_blank" rel="noreferrer" className="btn-github">
+                    Ver proyecto en GitHub
+                  </a>
                 </div>
               </DialogContent>
             </Dialog>
 
-            <Dialog>
+            <Dialog>  {/* Tercer proyecto */}
               <DialogTrigger asChild>
-                <div className="portfolio-card" onClick={() => setOpenModal("tareas")}>
-                  <div className="portfolio-card-image">📱</div>
+                <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
+                  <div className="portfolio-card-image"> <img src="/" alt="Aplicación web responsiva" className="card-icon" /></div>
                   <div className="portfolio-card-content">
-                    <h3 className="portfolio-card-title">App de Tareas</h3>
+                    <h3 className="portfolio-card-title">Aplicación de ventas en línea para un restaurante</h3>
                     <p className="portfolio-card-desc">
-                      Aplicación de gestión de tareas con funcionalidades de CRUD y almacenamiento local.
+                      Aplicación web responsiva para un restaurante local, permitiendo a los clientes realizar pedidos en línea y a los administradores gestionar el menú y los pedidos de manera eficiente.
                     </p>
                     <div className="portfolio-card-tags">
+                      <span className="tag">TypeScript</span>
                       <span className="tag">React</span>
-                      <span className="tag">CSS</span>
+                      <span className="tag">Supabase</span>
+                      <span className="tag">Css</span>
                     </div>
                   </div>
                 </div>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="dialog-custom">
                 <DialogHeader>
-                  <DialogTitle>App de Tareas</DialogTitle>
-                  <DialogDescription>
-                    Gestión eficiente de tareas personales.
+                  <DialogTitle className="modal-title">Aplicación web responsiva</DialogTitle>
+                  <DialogDescription className="modal-subtitle">
+                    Aplicación móvil para ventas de alimentos dentro de campus universitario.
                   </DialogDescription>
                 </DialogHeader>
-                <div>
-                  <p>Aplicación móvil/web para organizar tareas con operaciones CRUD completas y almacenamiento local.</p>
-                  <p>Tecnologías: React, CSS, LocalStorage</p>
-                  <a href="#" className="text-blue-500">Ver proyecto</a>
+
+                <div className="modal-body">
+                  <p>
+                    Desarrollé esta aplicación web responsiva para un restaurante local, permitiéndole gestionar sus pedidos de ventas en línea y llevar un seguimiento de los mismos para la satisfacción de sus clientes.
+                  </p>
+                  <a href="https://github.com/CeAlejandroo/aplicaci-n_comida_food_truck/tree/main" target="_blank" rel="noreferrer" className="btn-github">
+                    Ver proyecto en GitHub
+                  </a>
                 </div>
               </DialogContent>
             </Dialog>
