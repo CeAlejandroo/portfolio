@@ -1,0 +1,3 @@
+Funcionalidad a link de cebale4@gmail.com
+papu nos quedamos en dar formato a los DIALOG, terminar de agregar bien los links y agregar imagnes o galeria de los proyectos en GIT
+Dar funcionalidad a enviar correo

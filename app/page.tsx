@@ -789,7 +789,7 @@ export default function Portfolio() {
                 className={activeSection === "contacto" ? "active" : ""}
                 onClick={() => scrollToSection("contacto")}
               >
-                CONTACTO
+                {/*CONTACTO*/}
               </a>
             </li>
           </ul>
@@ -859,10 +859,11 @@ export default function Portfolio() {
         <section id="portafolio" className="section">
           <h2 className="section-title">Portafolio</h2>
           <div className="portfolio-grid">
-            <Dialog>
+            {/*Primer proyecto */}
+            <Dialog> 
               <DialogTrigger asChild>
                 <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
-                  <div className="portfolio-card-image"> <img src="/almuercito.png" alt="Almuercito escolar" className="card-icon" /></div>
+                  <div className="portfolio-card-image"> <img src="/Almuercito.png" alt="Almuercito escolar" className="card-icon" /></div>
                   <div className="portfolio-card-content">
                     <h3 className="portfolio-card-title">Almuercito escolar</h3>
                     <p className="portfolio-card-desc">
@@ -890,17 +891,17 @@ export default function Portfolio() {
                     Desarrollé esta solución integral para optimizar la compr de alimentos entre estudiantes y cafetería dentro del
                     campus universitario, incluyendo funcionalidades como carrito de compras, gestión de inventario y notificaciones en tiempo real para mejorar la experiencia del usuario y la eficiencia operativa.
                   </p>
-                  <a href="TU_LINK_AQUI" target="_blank" rel="noreferrer" className="btn-github">
+                  <a href="https://github.com/CeAlejandroo/AlmuercitoEscolar" target="_blank" rel="noreferrer" className="btn-github">
                     Ver proyecto en GitHub
                   </a>
                 </div>
               </DialogContent>
             </Dialog>
-
-            <Dialog>
+            {/* Segundo proyecto */}
+            <Dialog> 
               <DialogTrigger asChild>
                 <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
-                  <div className="portfolio-card-image"> <img src="/Almuercito.png" alt="Almuercito escolar" className="card-icon" /></div>
+                  <div className="portfolio-card-image"> <img src="/SistemaExperto.png" alt="Sistema experto nutricional" className="card-icon" /></div>
                   <div className="portfolio-card-content">
                     <h3 className="portfolio-card-title">Sistema experto nutricional</h3>
                     <p className="portfolio-card-desc">
@@ -932,11 +933,11 @@ export default function Portfolio() {
                 </div>
               </DialogContent>
             </Dialog>
-
-            <Dialog>  {/* Tercer proyecto */}
+            {/* Tercer proyecto */}
+            <Dialog>  
               <DialogTrigger asChild>
                 <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
-                  <div className="portfolio-card-image"> <img src="/" alt="Aplicación web responsiva" className="card-icon" /></div>
+                  <div className="portfolio-card-image"> <img src="/FoodTruck.png" alt="Aplicación web responsiva" className="card-icon" /></div>
                   <div className="portfolio-card-content">
                     <h3 className="portfolio-card-title">Aplicación de ventas en línea para un restaurante</h3>
                     <p className="portfolio-card-desc">
@@ -955,7 +956,7 @@ export default function Portfolio() {
                 <DialogHeader>
                   <DialogTitle className="modal-title">Aplicación web responsiva</DialogTitle>
                   <DialogDescription className="modal-subtitle">
-                    Aplicación móvil para ventas de alimentos dentro de campus universitario.
+                    Desarrollo de una aplicación web responsiva para un restaurante para gestionar sus pedidos en linea.
                   </DialogDescription>
                 </DialogHeader>
 
@@ -964,6 +965,42 @@ export default function Portfolio() {
                     Desarrollé esta aplicación web responsiva para un restaurante local, permitiéndole gestionar sus pedidos de ventas en línea y llevar un seguimiento de los mismos para la satisfacción de sus clientes.
                   </p>
                   <a href="https://github.com/CeAlejandroo/aplicaci-n_comida_food_truck/tree/main" target="_blank" rel="noreferrer" className="btn-github">
+                    Ver proyecto en GitHub
+                  </a>
+                </div>
+              </DialogContent>
+            </Dialog>
+            {/* Cuarto proyecto */}
+            <Dialog>  
+              <DialogTrigger asChild>
+                <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
+                  <div className="portfolio-card-image"> <img src="/GestorTareas.png" alt="Gestor de tareas" className="card-icon" /></div>
+                  <div className="portfolio-card-content">
+                    <h3 className="portfolio-card-title">Aplicación gestor de tareas</h3>
+                    <p className="portfolio-card-desc">
+                      Diseño frontend de una aplicación web para gestionar tareas diarias, con funcionalidades de creación, edición y eliminación de tareas, así como la capacidad de marcar tareas como completadas.
+                    </p>
+                    <div className="portfolio-card-tags">
+                      <span className="tag">Next.js</span>
+                      <span className="tag">React</span>
+                      <span className="tag">Supabase</span>
+                    </div>
+                  </div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="dialog-custom">
+                <DialogHeader>
+                  <DialogTitle className="modal-title">Gestor de tareas</DialogTitle>
+                  <DialogDescription className="modal-subtitle">
+                    Diseño frontend de una aplicación web "Gestor de tareas"
+                  </DialogDescription>
+                </DialogHeader>
+
+                <div className="modal-body">
+                  <p>
+                    Diseño frontend de una aplicación web para gestionar tareas diarias, con funcionalidades de creación, edición y eliminación de tareas, así como la capacidad de marcar tareas como completadas.
+                  </p>
+                  <a href="https://github.com/CeAlejandroo/GestorTareas" target="_blank" rel="noreferrer" className="btn-github">
                     Ver proyecto en GitHub
                   </a>
                 </div>
@@ -1118,7 +1155,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section 
         <section id="contacto" className="section">
           <h2 className="section-title">Contacto</h2>
           <div className="contact-content">
@@ -1154,6 +1191,7 @@ export default function Portfolio() {
             </form>
           </div>
         </section>
+        */}
       </main>
     </div>
   )
