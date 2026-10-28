@@ -738,7 +738,7 @@ export default function Portfolio() {
       <aside className="sidebar">
         <div className="avatar-container">
           <img
-            src="/images/foto-perfil.png"
+            src="/images/foto.jpeg"
             alt="Ceballos Alejandro"
           />
         </div>
@@ -804,13 +804,13 @@ export default function Portfolio() {
             <span className="first-name">CEBALLOS</span>
             <span className="last-name">ALEJANDRO</span>
           </h1>
-          <p className="hero-subtitle">Desarrolador Full Stack en proceso.</p>
-          <p className="hero-welcome">BIENVENIDO A MI PORTAFOLIO COMO DESARROLLADOR.</p>
+          <p className="hero-subtitle">Desarrollador Web Full Stack | E-commerce y soluciones para negocios</p>
+          <p className="hero-welcome">DESARROLLO WEB, VENTAS EN LÍNEA Y SISTEMAS PARA NEGOCIOS.</p>
           <p className="hero-contact">
             Si quieres ponerte en contacto conmigo escríbeme a{" "}
             <a href="mailto:cebale4@gmail.com">cebale4@gmail.com</a>
           </p>
-          <a href="/cv.pdf" download className="cv-button">Descarga mi CV</a>
+          <a href="/CV.pdf" download="Antonio-Alejandro-Ceballos-Rivera-CV.pdf" className="cv-button">Descarga mi CV</a>
           <div className="social-icons">
             <a target="_blank" href="https://www.linkedin.com/in/antonio-alejandro-ceballos-rivera-6a5166375/" className="social-icon" aria-label="LinkedIn">
               <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
@@ -836,18 +836,18 @@ export default function Portfolio() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                ¡Hola! Soy <strong>Antonio Alejandro</strong>, Ingeniero en Sistemas Computacionales y un apasionado del desarrollo web enfocado en la creación de experiencias digitales robustas, escalables y únicas.
+                ¡Hola! Soy <strong>Antonio Alejandro</strong>, Ingeniero en Sistemas Computacionales y desarrollador web Full Stack. Me enfoco en crear plataformas para negocios y experiencias de comercio electrónico que faciliten las ventas en línea.
               </p>
               <p>
-                Tengo experiencia sólida diseñando e implementando soluciones tanto en el <strong>Frontend</strong> como en el <strong>Backend</strong>. Mi stack principal incluye tecnologías como <strong>JavaScript, TypeScript, React, Next.js y Python</strong>. Me encanta transformar ideas complejas en interfaces atractivas, funcionales y optimizadas que brinden una excelente experiencia de usuario.
+                Tengo experiencia diseñando e implementando soluciones de <strong>Frontend y Backend</strong>, integrando APIs y sistemas de gestión. Mi stack incluye <strong>JavaScript, TypeScript, React, Next.js, PHP y Laravel</strong>. Busco que cada producto sea responsivo, claro y fácil de usar, tanto para clientes como para quienes administran el negocio.
               </p>
               <p>
-                Me impulsa el aprendizaje continuo y moverme al ritmo del mercado tecnológico actual para plasmar las mejores prácticas en cada proyecto. Actualmente me desempeño como <strong>Desarrollador Full Stack Freelance</strong>, siempre listo para enfrentar nuevos retos y colaborar en proyectos reales que generen un impacto positivo.
+                He desarrollado plataformas web para clientes y empresas, además de soluciones de pedidos en línea con gestión de menú y órdenes. Mi experiencia es como <strong>Desarrollador Web Full Stack</strong>, con interés especial en proyectos de e-commerce y transformación digital de negocios.
               </p>
             </div>
             <div className="about-image">
               <img
-                src="/images/foto-perfil.png"
+                src="/images/foto.jpeg"
                 alt="Ceballos Alejandro"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px' }}
               />
@@ -939,9 +939,9 @@ export default function Portfolio() {
                 <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
                   <div className="portfolio-card-image"> <img src="/FoodTruck.png" alt="Aplicación web responsiva" className="card-icon" /></div>
                   <div className="portfolio-card-content">
-                    <h3 className="portfolio-card-title">Aplicación de ventas en línea para un restaurante</h3>
+                    <h3 className="portfolio-card-title">E-commerce y pedidos en línea para restaurante</h3>
                     <p className="portfolio-card-desc">
-                      Aplicación web responsiva para un restaurante local, permitiendo a los clientes realizar pedidos en línea y a los administradores gestionar el menú y los pedidos de manera eficiente.
+                      Experiencia de compra web responsiva para realizar pedidos en línea, con gestión de menú y órdenes para el negocio.
                     </p>
                     <div className="portfolio-card-tags">
                       <span className="tag">TypeScript</span>
@@ -954,9 +954,9 @@ export default function Portfolio() {
               </DialogTrigger>
               <DialogContent className="dialog-custom">
                 <DialogHeader>
-                  <DialogTitle className="modal-title">Aplicación web responsiva</DialogTitle>
+                  <DialogTitle className="modal-title">E-commerce y pedidos en línea para restaurante</DialogTitle>
                   <DialogDescription className="modal-subtitle">
-                    Desarrollo de una aplicación web responsiva para un restaurante para gestionar sus pedidos en linea.
+                    Aplicación web responsiva para gestionar pedidos de venta en línea de un restaurante local.
                   </DialogDescription>
                 </DialogHeader>
 

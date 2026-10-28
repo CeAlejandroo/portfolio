@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Portafolio de Antonio Alejandro',
-  description: 'Desarrollador Full-Stack en proceso de aprendizaje, con experiencia en proyectos personales y colaborativos. Apasionado por la tecnología y el desarrollo de software.',
-  keywords: ['Portafolio', 'Desarrollador Full-Stack', 'Proyectos personales', 'Colaborativos', 'Tecnología', 'Desarrollo de software'],
+  title: 'Antonio Alejandro Ceballos Rivera | Desarrollador Web Full Stack',
+  description: 'Ingeniero en Sistemas Computacionales y desarrollador web Full Stack. Experiencia en plataformas para negocios, comercio electrónico, pedidos en línea e integración de APIs.',
+  keywords: ['Portafolio', 'Desarrollador Web Full Stack', 'E-commerce', 'Comercio electrónico', 'Pedidos en línea', 'React', 'Next.js', 'Integración de APIs'],
 
   icons: {
       icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💼</text></svg>',
@@ -23,7 +23,7 @@ export default function RootLayout({
     children: React.ReactNode
   }>) {
     return (
-      <html lang="en">
+      <html lang="es">
         <body className="font-sans antialiased">
           {children}
           {process.env.NODE_ENV === 'production' && <Analytics />}
