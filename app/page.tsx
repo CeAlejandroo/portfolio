@@ -9,6 +9,66 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import {
+  Bot,
+  Braces,
+  Cloud,
+  Code2,
+  Container,
+  Database,
+  FileCode2,
+  FlaskConical,
+  Globe,
+  Github,
+  HardDrive,
+  Headset,
+  Layers,
+  Network,
+  PanelsTopLeft,
+  Send,
+  ShieldCheck,
+  Smartphone,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react"
+
+const skillIcons: Record<string, { icon: LucideIcon; color: string }> = {
+  "Next.js": { icon: Code2, color: "#ffffff" },
+  TypeScript: { icon: Braces, color: "#3178C6" },
+  "PHP (Laravel)": { icon: FileCode2, color: "#FF2D20" },
+  "C# (.NET)": { icon: Layers, color: "#512BD4" },
+  "Tailwind CSS": { icon: PanelsTopLeft, color: "#38BDF8" },
+  WordPress: { icon: Globe, color: "#21759B" },
+  "Administración de Redes (Switches, Routers, QoS)": { icon: Network, color: "#38BDF8" },
+  "Active Directory": { icon: ShieldCheck, color: "#0078D4" },
+  "Diagnóstico de Hardware/Software": { icon: HardDrive, color: "#A8A8C0" },
+  "Soporte Técnico Integral": { icon: Headset, color: "#A8A8C0" },
+  "SQL Server": { icon: Database, color: "#CC2927" },
+  PostgreSQL: { icon: Database, color: "#4169E1" },
+  MySQL: { icon: Database, color: "#4479A1" },
+  Supabase: { icon: Database, color: "#3ECF8E" },
+  MariaDB: { icon: Database, color: "#C0765A" },
+  Cloudflare: { icon: Cloud, color: "#F38020" },
+  "APIs RESTful": { icon: Send, color: "#8B5CF6" },
+  "Postman (Testing/Docs)": { icon: FlaskConical, color: "#FF6C37" },
+  "Agentes de IA / LLMs": { icon: Bot, color: "#A78BFA" },
+  GitHub: { icon: Github, color: "#ffffff" },
+  "Flutter / Dart": { icon: Smartphone, color: "#54C5F8" },
+  Docker: { icon: Container, color: "#2496ED" },
+}
+
+function SkillCard({ name }: { name: string }) {
+  const { icon: Icon, color } = skillIcons[name]
+
+  return (
+    <div className="skill-item">
+      <div className="skill-icon" aria-hidden="true">
+        <Icon size={28} color={color} strokeWidth={1.8} />
+      </div>
+      <span className="skill-name">{name}</span>
+    </div>
+  )
+}
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("inicio")
@@ -316,6 +376,137 @@ export default function Portfolio() {
           justify-content: center;
           font-size: 40px;
         }
+
+        .malinalli-preview {
+          position: relative;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 12px;
+          padding: 24px;
+          background: #1a0904;
+          color: #f5b900;
+        }
+
+        .malinalli-brand-mark {
+          display: grid;
+          width: 40px;
+          height: 40px;
+          place-items: center;
+          border-radius: 8px;
+          background: #f5b900;
+          color: #1a0904;
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        .malinalli-brand-copy {
+          display: flex;
+          flex-direction: column;
+          font-family: Georgia, serif;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1;
+        }
+
+        .malinalli-brand-copy small {
+          margin-top: 5px;
+          color: #bda98f;
+          font-family: 'Poppins', sans-serif;
+          font-size: 8px;
+          letter-spacing: 2px;
+        }
+
+        .malinalli-preview-heading {
+          position: absolute;
+          top: 95px;
+          left: 24px;
+          font-family: Georgia, serif;
+          font-size: 28px;
+          font-weight: 700;
+        }
+
+        .malinalli-preview-caption {
+          position: absolute;
+          top: 140px;
+          left: 24px;
+          color: #bda98f;
+          font-size: 12px;
+        }
+
+        .news-cms-preview {
+          display: grid;
+          grid-template-columns: 110px 1fr;
+          background: #f3efe4;
+          color: #211b17;
+          font-family: 'Poppins', sans-serif;
+          font-size: 9px;
+        }
+
+        .news-cms-sidebar {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          padding: 18px 12px;
+          background: #1d1a17;
+          color: #fff;
+        }
+
+        .news-cms-sidebar strong {
+          margin-bottom: 4px;
+          color: #ef9b9b;
+          font-size: 7px;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+        }
+
+        .news-cms-main {
+          min-width: 0;
+          padding: 14px 18px;
+        }
+
+        .news-cms-main h4 {
+          margin-bottom: 3px;
+          font-family: Georgia, serif;
+          font-size: 21px;
+          font-weight: 400;
+        }
+
+        .news-cms-main p {
+          margin-bottom: 10px;
+          color: #766e62;
+          font-size: 8px;
+        }
+
+        .news-cms-table {
+          overflow: hidden;
+          border: 1px solid #ded5c5;
+          border-radius: 6px;
+          background: #faf8f1;
+        }
+
+        .news-cms-table-row {
+          display: grid;
+          grid-template-columns: 1fr 54px 58px;
+          gap: 8px;
+          align-items: center;
+          padding: 7px 8px;
+          border-bottom: 1px solid #e6dece;
+        }
+
+        .news-cms-table-row:last-child {
+          border-bottom: 0;
+        }
+
+        .news-cms-status {
+          width: fit-content;
+          padding: 2px 6px;
+          border-radius: 10px;
+          background: #d7eee2;
+          color: #176746;
+          font-size: 7px;
+        }
+
         .card-icon {
           width: 100%;  /* Tamaño de la imagen */
           height: 100%; 
@@ -859,7 +1050,153 @@ export default function Portfolio() {
         <section id="portafolio" className="section">
           <h2 className="section-title">Portafolio</h2>
           <div className="portfolio-grid">
-            {/*Primer proyecto */}
+            {/* Proyecto destacado */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="portfolio-card" onClick={() => setOpenModal("foodtruck")}>
+                  <div className="portfolio-card-image">
+                    <img src="/FoodTruck.png" alt="Aplicación de comida para restaurante" className="card-icon" />
+                  </div>
+                  <div className="portfolio-card-content">
+                    <h3 className="portfolio-card-title">E-commerce y pedidos en línea para restaurante</h3>
+                    <p className="portfolio-card-desc">
+                      Experiencia de compra web responsiva para realizar pedidos en línea, con gestión de menú y órdenes para el negocio.
+                    </p>
+                    <div className="portfolio-card-tags">
+                      <span className="tag">TypeScript</span>
+                      <span className="tag">React</span>
+                      <span className="tag">Supabase</span>
+                      <span className="tag">CSS</span>
+                    </div>
+                  </div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="dialog-custom">
+                <DialogHeader>
+                  <DialogTitle className="modal-title">E-commerce y pedidos en línea para restaurante</DialogTitle>
+                  <DialogDescription className="modal-subtitle">
+                    Aplicación web responsiva para gestionar pedidos de venta en línea de un restaurante local.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="modal-body">
+                  <p>
+                    Desarrollé esta aplicación web responsiva para un restaurante local, permitiéndole gestionar sus pedidos de ventas en línea y llevar un seguimiento de los mismos para la satisfacción de sus clientes.
+                  </p>
+                  <a href="https://github.com/CeAlejandroo/aplicaci-n_comida_food_truck/tree/main" target="_blank" rel="noreferrer" className="btn-github">
+                    Ver proyecto en GitHub
+                  </a>
+                </div>
+              </DialogContent>
+            </Dialog>
+            {/* Malinalli Talent Hub */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="portfolio-card" onClick={() => setOpenModal("malinalli")}>
+                  <div className="portfolio-card-image malinalli-preview" aria-label="Malinalli Talent Hub">
+                    <div className="malinalli-brand-mark">M</div>
+                    <div className="malinalli-brand-copy">
+                      <span>Malinalli</span>
+                      <small>ELITE RECRUITMENT</small>
+                    </div>
+                    <div className="malinalli-preview-heading">Encuentra tu próximo desafío</div>
+                    <div className="malinalli-preview-caption">Reclutamiento y gestión de talento</div>
+                  </div>
+                  <div className="portfolio-card-content">
+                    <h3 className="portfolio-card-title">Malinalli Talent Hub</h3>
+                    <p className="portfolio-card-desc">
+                      Plataforma de reclutamiento para gestionar vacantes, candidatos y procesos de selección.
+                    </p>
+                    <div className="portfolio-card-tags">
+                      <span className="tag">React</span>
+                      <span className="tag">TypeScript</span>
+                      <span className="tag">Tailwind CSS</span>
+                      <span className="tag">Supabase</span>
+                      <span className="tag">TanStack Start</span>
+                      <span className="tag">Vite</span>
+                    </div>
+                  </div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="dialog-custom">
+                <DialogHeader>
+                  <DialogTitle className="modal-title">Malinalli Talent Hub</DialogTitle>
+                  <DialogDescription className="modal-subtitle">
+                    Plataforma de reclutamiento para gestionar vacantes, candidatos y procesos de selección.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="modal-body">
+                  <p>
+                    Portal de talento con herramientas para administrar vacantes y acompañar procesos de reclutamiento.
+                  </p>
+                  <a href="https://github.com/CeAlejandroo/malinalli-talent-hub" target="_blank" rel="noreferrer" className="btn-github">
+                    Ver proyecto en GitHub
+                  </a>
+                </div>
+              </DialogContent>
+            </Dialog>
+            {/* CMS de Noticias */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="portfolio-card" onClick={() => setOpenModal("cms-noticias")}>
+                  <div className="portfolio-card-image news-cms-preview" aria-label="Panel central CMS de Noticias">
+                    <div className="news-cms-sidebar">
+                      <strong>Mesa Maestra</strong>
+                      <span>▦　Panel</span>
+                      <span>▤　Artículos</span>
+                      <span>✎　Notas del agente</span>
+                      <span>◎　Portales</span>
+                    </div>
+                    <div className="news-cms-main">
+                      <h4>Artículos</h4>
+                      <p>Borradores, revisión editorial y publicación en portales.</p>
+                      <div className="news-cms-table">
+                        <div className="news-cms-table-row">
+                          <strong>Notas listas para publicar</strong>
+                          <span>Editor</span>
+                          <span className="news-cms-status">Revisado</span>
+                        </div>
+                        <div className="news-cms-table-row">
+                          <strong>Contenido optimizado para búsqueda</strong>
+                          <span>Agente IA</span>
+                          <span className="news-cms-status">Publicado</span>
+                        </div>
+                        <div className="news-cms-table-row">
+                          <strong>Distribución en portales</strong>
+                          <span>SEO</span>
+                          <span className="news-cms-status">En cola</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="portfolio-card-content">
+                    <h3 className="portfolio-card-title">Mesa Maestra — CMS de Noticias</h3>
+                    <p className="portfolio-card-desc">
+                      Panel centralizado que coordina la redacción asistida por IA y distribución de noticias a múltiples portales, con revisión humana y seguimiento de métricas SEO.
+                    </p>
+                    <div className="portfolio-card-tags">
+                      <span className="tag">Agente IA</span>
+                      <span className="tag">Revisión editorial</span>
+                      <span className="tag">Publicación multisitio</span>
+                      <span className="tag">Métricas SEO</span>
+                    </div>
+                  </div>
+                </div>
+              </DialogTrigger>
+              <DialogContent className="dialog-custom">
+                <DialogHeader>
+                  <DialogTitle className="modal-title">Mesa Maestra — CMS de Noticias</DialogTitle>
+                  <DialogDescription className="modal-subtitle">
+                    Panel central para crear, revisar y distribuir contenido editorial en varios portales noticiosos.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="modal-body">
+                  <p>
+                    Un agente de IA redacta las notas y prepara su distribución a los portales seleccionados. Antes de publicarse, cada artículo pasa por revisión y aprobación humana. El panel también permite dar seguimiento a métricas SEO y al estado de las publicaciones y sincronizaciones.
+                  </p>
+                </div>
+              </DialogContent>
+            </Dialog>
+            {/* Almuercito escolar */}
             <Dialog> 
               <DialogTrigger asChild>
                 <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
@@ -933,44 +1270,7 @@ export default function Portfolio() {
                 </div>
               </DialogContent>
             </Dialog>
-            {/* Tercer proyecto */}
-            <Dialog>  
-              <DialogTrigger asChild>
-                <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
-                  <div className="portfolio-card-image"> <img src="/FoodTruck.png" alt="Aplicación web responsiva" className="card-icon" /></div>
-                  <div className="portfolio-card-content">
-                    <h3 className="portfolio-card-title">E-commerce y pedidos en línea para restaurante</h3>
-                    <p className="portfolio-card-desc">
-                      Experiencia de compra web responsiva para realizar pedidos en línea, con gestión de menú y órdenes para el negocio.
-                    </p>
-                    <div className="portfolio-card-tags">
-                      <span className="tag">TypeScript</span>
-                      <span className="tag">React</span>
-                      <span className="tag">Supabase</span>
-                      <span className="tag">Css</span>
-                    </div>
-                  </div>
-                </div>
-              </DialogTrigger>
-              <DialogContent className="dialog-custom">
-                <DialogHeader>
-                  <DialogTitle className="modal-title">E-commerce y pedidos en línea para restaurante</DialogTitle>
-                  <DialogDescription className="modal-subtitle">
-                    Aplicación web responsiva para gestionar pedidos de venta en línea de un restaurante local.
-                  </DialogDescription>
-                </DialogHeader>
-
-                <div className="modal-body">
-                  <p>
-                    Desarrollé esta aplicación web responsiva para un restaurante local, permitiéndole gestionar sus pedidos de ventas en línea y llevar un seguimiento de los mismos para la satisfacción de sus clientes.
-                  </p>
-                  <a href="https://github.com/CeAlejandroo/aplicaci-n_comida_food_truck/tree/main" target="_blank" rel="noreferrer" className="btn-github">
-                    Ver proyecto en GitHub
-                  </a>
-                </div>
-              </DialogContent>
-            </Dialog>
-            {/* Cuarto proyecto */}
+            {/* Gestor de tareas */}
             <Dialog>  
               <DialogTrigger asChild>
                 <div className="portfolio-card" onClick={() => setOpenModal("almuercito")}>
@@ -1079,7 +1379,7 @@ export default function Portfolio() {
           <h2 className="section-title">Skills</h2>
           <div className="skills-container">
             <div className="skills-category">
-              <h3>Lenguajes & Frameworks</h3>
+              <h3>Desarrollo Web &amp; Frameworks</h3>
               <div className="skills-grid">
                 <div className="skill-item">
                   <div className="skill-icon">
@@ -1087,7 +1387,7 @@ export default function Portfolio() {
                       <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" />
                     </svg>
                   </div>
-                  <span className="skill-name">HTML5</span>
+                  <span className="skill-name">HTML</span>
                 </div>
                 <div className="skill-item">
                   <div className="skill-icon">
@@ -1095,7 +1395,7 @@ export default function Portfolio() {
                       <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z" />
                     </svg>
                   </div>
-                  <span className="skill-name">CSS3</span>
+                  <span className="skill-name">CSS</span>
                 </div>
                 <div className="skill-item">
                   <div className="skill-icon">
@@ -1113,10 +1413,34 @@ export default function Portfolio() {
                   </div>
                   <span className="skill-name">React</span>
                 </div>
+                {["Next.js", "TypeScript", "PHP (Laravel)", "C# (.NET)", "Tailwind CSS", "WordPress"].map((skill) => (
+                  <SkillCard key={skill} name={skill} />
+                ))}
               </div>
             </div>
             <div className="skills-category">
-              <h3>Herramientas</h3>
+              <h3>Infraestructura &amp; Soporte</h3>
+              <div className="skills-grid">
+                {[
+                  "Administración de Redes (Switches, Routers, QoS)",
+                  "Active Directory",
+                  "Diagnóstico de Hardware/Software",
+                  "Soporte Técnico Integral",
+                ].map((skill) => (
+                  <SkillCard key={skill} name={skill} />
+                ))}
+              </div>
+            </div>
+            <div className="skills-category">
+              <h3>Bases de Datos &amp; Cloud</h3>
+              <div className="skills-grid">
+                {["SQL Server", "PostgreSQL", "MySQL", "Supabase", "MariaDB", "Cloudflare"].map((skill) => (
+                  <SkillCard key={skill} name={skill} />
+                ))}
+              </div>
+            </div>
+            <div className="skills-category">
+              <h3>APIs &amp; Herramientas</h3>
               <div className="skills-grid">
                 <div className="skill-item">
                   <div className="skill-icon">
@@ -1150,6 +1474,9 @@ export default function Portfolio() {
                   </div>
                   <span className="skill-name">Bootstrap</span>
                 </div>
+                {["APIs RESTful", "Postman (Testing/Docs)", "Agentes de IA / LLMs", "GitHub", "Flutter / Dart", "Docker"].map((skill) => (
+                  <SkillCard key={skill} name={skill} />
+                ))}
               </div>
             </div>
           </div>
