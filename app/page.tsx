@@ -1035,6 +1035,9 @@ export default function Portfolio() {
               <p>
                 He desarrollado plataformas web para clientes y empresas, además de soluciones de pedidos en línea con gestión de menú y órdenes. Mi experiencia es como <strong>Desarrollador Web Full Stack</strong>, con interés especial en proyectos de e-commerce y transformación digital de negocios.
               </p>
+              <p>
+                Por motivos de confidencialidad, no puedo compartir públicamente todos los proyectos que he desarrollado para Clever Cloud y Enjambre Digital. En este portafolio presento algunos proyectos cuya publicación está permitida.
+              </p>
             </div>
             <div className="about-image">
               <img
